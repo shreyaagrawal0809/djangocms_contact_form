@@ -20,7 +20,7 @@ def contact(request):
             if cc_myself:
                 recipients.append(sender)
         send_mail(subject, message, sender, recipients)
-        return HttpResponse('Thanks')
+        return render(request, 'thankyou.html')
 
     # if a GET (or any other method) we'll create a blank form
     else:
